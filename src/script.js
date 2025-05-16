@@ -6,18 +6,41 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 const scene = new THREE.Scene()
 
 // add objects to the scene
-/********************* 
-const cubeGeometry = new THREE.BoxGeometry(1,1,1)
+
+//const geometry = new THREE.BoxGeometry(1,1,1)
+/**
+ * 
+الرقم الأول: 1
+
+هذا الرقم يمثل نصف قطر الكرة (Radius).
+يحدد حجم الكرة. إذا قمت بزيادة هذا الرقم، ستصبح الكرة أكبر. إذا قمت بتقليله، ستصبح الكرة أصغر.
+وحدة القياس هنا نسبية، تعتمد على الوحدات التي تستخدمها لبقية العناصر في المشهد الخاص بك (مثل موقع الكاميرا والأضواء).
+الرقم الثاني: 16
+
+هذا الرقم يمثل عدد الشرائح الأفقية (Width Segments أو Horizontal Segments).
+يحدد عدد التقسيمات أو الخطوط التي سيتم إنشاؤها حول محيط الكرة أفقياً (من القطب إلى القطب).
+كلما زاد هذا الرقم، أصبحت الكرة أكثر تفصيلاً ونعومة، حيث يتم تقريب شكلها بشكل أفضل بواسطة المزيد من المضلعات الصغيرة.
+إذا قللت هذا الرقم، ستبدو الكرة أكثر "تكتلاً" أو ذات أوجه مرئية.
+الرقم الثالث: 16
+
+هذا الرقم يمثل عدد القطاعات العمودية (Height Segments أو Vertical Segments).
+يحدد عدد التقسيمات أو الخطوط التي سيتم إنشاؤها حول الكرة عمودياً (حول المحور من الأعلى إلى الأسفل).
+مثل عدد الشرائح الأفقية، كلما زاد هذا الرقم، أصبحت الكرة أكثر نعومة وتفصيلاً.
+إذا قللت هذا الرقم، ستبدو الكرة أكثر "تكتلاً" من حيث الارتفاع.
+ */
+const geometry = new THREE.SphereGeometry(1,16,16)
+
 const cubeMaterial = new THREE.MeshBasicMaterial({color: "purple" , wireframe: true})
 
 const cubeMesh = new THREE.Mesh(
-  cubeGeometry,
+  geometry,
   cubeMaterial
 )
-scene.add(cubeMesh)***************************/
+scene.add(cubeMesh)
 
 // initialize the custom geometry 
-const vertices=
+// bameel mothaleth men verticies
+//const vertices=
 
 // initialize the camera
 const camera = new THREE.PerspectiveCamera(
